@@ -107,7 +107,7 @@ namespace TRIVIA
             }
             else
             {
-                WrongAnswers.Add(answer);
+                WrongAnswers.Add(string.Format("{0}: {1} | ", args.Player.Name, answer));
                 args.Player.SendErrorMessage(string.Format("{0} is not the correct answer! better luck next time!", answer));
             }
         }
@@ -390,7 +390,6 @@ namespace TRIVIA
             public int CurrencyAmount = 100;
             public trivia[] QuestionsandAnswers = DefaultTrivia;
         }
-
 
         private static void CreateConfig()
         {

@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Timers;
 using Wolfje.Plugins.SEconomy;
 
-
-
 namespace TRIVIA
 {
-    [ApiVersion(1, 14)]
+    [ApiVersion(1, 15)]
     public class Trivia : TerrariaPlugin
     {
         List<string> WrongAnswers = new List<string>();
@@ -107,7 +105,7 @@ namespace TRIVIA
             }
             else
             {
-                WrongAnswers.Add(string.Format("{0}: {1} | ", args.Player.Name, answer));
+                WrongAnswers.Add(string.Format("{0}: {1} ", args.Player.Name, answer));
                 args.Player.SendErrorMessage(string.Format("{0} is not the correct answer! better luck next time!", answer));
             }
         }
